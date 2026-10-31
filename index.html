@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maison de Jun - Technology Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+
+            <div class="logo">
+              <img src="images/logo.png"  alt="Logo Fourth Tech" class="logo-img">
+                <h1>Maison <span>de</span> Jun</h1>
+            </div>
+
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="produk.html">Produk</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="kontak.html">Kontak</a>
+                <a href="keranjang.html" class="cart-link">
+                   🛒 <span id="cart-count">0</span> 
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+   <!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-glow hero-glow-one"></div>
+    <div class="hero-glow hero-glow-two"></div>
+    <div class="hero-grid"></div>
+
+    <div class="container hero-content">
+
+        <!-- BAGIAN KIRI: TEKS -->
+        <div class="hero-text">
+
+            <div class="hero-label">
+                <span class="label-dot"></span>
+                <span id="changing-text">TECHNOLOGY FOR YOUR FUTURE</span>
+            </div>
+
+            <h2 class="hero-title">
+                Upgrade Your<br>
+                Digital Life<span class="title-dot">.</span>
+                <span class="hero-title-accent" id="changing-title">
+                    Beyond Limits.
+                </span>
+            </h2>
+
+            <p class="hero-description">
+                Temukan laptop, aksesoris, dan gadget pilihan
+                untuk mendukung kreativitas, produktivitas,
+                serta gaya hidup digitalmu.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="produk.html" class="btn hero-main-btn">
+                    Jelajahi Produk
+                    <span>↗</span>
+                </a>
+
+                <a href="kontak.html" class="btn-secondary hero-alt-btn">
+                    Hubungi Kami
+                </a>
+            </div>
+
+            <div class="hero-mini-info">
+                <span class="mini-info-line"></span>
+                <span>YOUR NEXT TECH EXPERIENCE STARTS HERE</span>
+            </div>
+
+        </div>
+
+
+        <!-- BAGIAN KANAN: GADGET -->
+        <div class="hero-visual">
+
+            <div class="visual-orbit orbit-one"></div>
+            <div class="visual-orbit orbit-two"></div>
+            <div class="visual-orbit orbit-three"></div>
+
+            <div class="visual-glow"></div>
+
+            <!-- GAMBAR PRODUK BERGANTI -->
+            <div class="hero-product-stage">
+
+                <div class="hero-product active">
+                    <img
+                        src="images/produk1.jpg"
+                        alt="Laptop pilihan Maison de Jun"
+                    >
+
+                    <div class="product-floating-label">
+                        <span class="floating-label-icon">✦</span>
+                        <div>
+                            <small>EXPLORE</small>
+                            <p>Laptop Collection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-product">
+                    <img
+                        src="images/produk9.jpg"
+                        alt="Smartphone pilihan Maison de Jun"
+                    >
+
+                    <div class="product-floating-label">
+                        <span class="floating-label-icon">✦</span>
+                        <div>
+                            <small>DISCOVER</small>
+                            <p>Smartphone Series</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-product">
+                    <img
+                        src="images/produk10.jpg"
+                        alt="Smartwatch pilihan Maison de Jun"
+                    >
+
+                    <div class="product-floating-label">
+                        <span class="floating-label-icon">✦</span>
+                        <div>
+                            <small>UPGRADE</small>
+                            <p>Smartwatch Collection</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- IDENTITAS TOKO -->
+            <div class="hero-brand-mark">
+                <span class="brand-mark-line"></span>
+                <span>MAISON DE JUN</span>
+                <span class="brand-mark-line"></span>
+            </div>
+
+            <!-- INDIKATOR SLIDE -->
+            <div class="hero-slide-controls">
+                <span class="slide-number" id="hero-slide-number">01</span>
+
+                <div class="slide-progress">
+                    <span class="slide-progress-bar active"></span>
+                    <span class="slide-progress-bar"></span>
+                    <span class="slide-progress-bar"></span>
+                </div>
+
+                <span class="slide-total">03</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-bottom-line">
+        <span>TECHNOLOGY</span>
+        <span class="bottom-line-decoration"></span>
+        <span>INNOVATION</span>
+        <span class="bottom-line-decoration"></span>
+        <span>YOUR DIGITAL WORLD</span>
+    </div>
+
+</section>
+
+
+        <!-- PRODUK UNGGULAN -->
+        <section class="produk-unggulan">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p>OUR FAVORITES</p>
+                    <h2>Produk Unggulan</h2>
+                    <span>
+                        Pilihan teknologi terbaik untuk kebutuhanmu.
+                    </span>
+                </div>
+
+
+                <div class="product-grid">
+
+                    <!-- PRODUK 1 -->
+                    <div class="card">
+
+                        <div class="product-image">
+                            <img src="images/produk1.jpg" alt="Laptop FourthTech">
+                            <span class="product-badge">BEST SELLER</span>
+                        </div>
+
+                        <div class="card-content">
+
+                            <p class="product-category">KOMPUTER&LAPTOP</p>
+
+                            <h3>Laptop Gaming</h3>
+
+                            <p>
+                                Laptop berkualitas dengan performa
+                                yang cocok untuk belajar, game dan bekerja.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>Rp20.000.000</strong>
+
+                                <a href="produk.html" class="product-btn">
+                                    →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PRODUK 2 -->
+                    <div class="card">
+
+                        <div class="product-image">
+                            <img src="images/produk2.jpg" alt="Keyboard FourthTech">
+                            <span class="product-badge new">NEW</span>
+                        </div>
+
+                        <div class="card-content">
+
+                            <p class="product-category">ACCESSORIES</p>
+
+                            <h3>Keyboard</h3>
+
+                            <p>
+                                Keyboard nyaman dan stylish untuk
+                                belajar, bekerja, maupun bermain.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <strong>Rp350.000</strong>
+
+                                <a href="produk.html" class="product-btn">
+                                    →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FITUR -->
+        <section class="features">
+
+            <div class="container">
+
+                <div class="feature">
+
+                    <div class="feature-icon">🚚</div>
+
+                    <div>
+                        <h3>Pengiriman Cepat</h3>
+                        <p>Pesanan dikirim dengan cepat dan aman.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">🛡️</div>
+
+                    <div>
+                        <h3>Produk Berkualitas</h3>
+                        <p>Produk pilihan dengan kualitas terbaik.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">💬</div>
+
+                    <div>
+                        <h3>Support Ramah</h3>
+                        <p>Kami siap membantu kebutuhan teknologi kamu.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+   <!-- FOOTER -->
+<footer>
+
+    <!-- INFORMASI FOOTER -->
+    <div class="container footer-content">
+
+        <!-- DESIGNED BY -->
+        <div class="footer-item">
+            <p class="footer-label">DESIGNED BY</p>
+
+            <h2>Nabiilah</h2>
+
+            <p>Creative Web Designer</p>
+        </div>
+
+
+        <!-- CONTACT PERSON -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT PERSON</p>
+
+            <h2>Customer Service</h2>
+
+            <p>+62 812-3456-7890</p>
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT</p>
+
+            <div class="social-link">
+
+                <span class="social-icon">✉</span>
+
+                <span>maisondejun@gmail.com</span>
+
+            </div>
+
+            <p>We are ready to help you</p>
+        </div>
+
+
+        <!-- INSTAGRAM -->
+        <div class="footer-item">
+            <p class="footer-label">FOLLOW US</p>
+
+            <div class="social-link">
+
+                <span class="social-icon instagram-icon">
+                    <span class="instagram-camera"></span>
+                </span>
+
+                <span>@maisondejun.studio</span>
+
+            </div>
+
+            <p>Instagram & TikTok</p>
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MaisondeJun. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+<!-- JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maison de Jun - Kontak Kami</title>
+    
+    <!-- Google Fonts (Montserrat & Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Link Ke CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGASI -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo FourthTech" class="logo-img">
+                <h1>Maison <span>de</span> Jun</h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="produk.html">Produk</a>
+                <a href="tentang.html">Tentang</a>
+                <a href="kontak.html" class="active">Kontak</a>
+                <a href="keranjang.html" class="cart-link">
+                    🛒 <span id="cart-count">0</span>
+              </a>     
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT / HALAMAN KONTAK -->
+    <main>
+        <section class="kontak">
+            <div class="container">
+                
+                <!-- Judul & Sub-judul -->
+                <div class="kontak-header">
+                    <h2>Hubungi Kami</h2>
+                    <p>Ada pertanyaan seputar produk atau pesanan? Tim MaisondeJun siap membantu Anda!</p>
+                </div>
+
+                <!-- Grid Kontak (Info + Form) -->
+                <div class="kontak-wrapper">
+                    
+                    <!-- Kartu Informasi Kontak -->
+                    <div class="kontak-info">
+                        <h3>Informasi Kontak</h3>
+                        <p class="info-desc">Silakan hubungi kami melalui saluran berikut atau isi formulir pesan.</p>
+                        
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Alamat Toko</h4>
+                                <p>Jl. Teknologi No. 4, Jakarta Selatan, Indonesia</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <h4>Telepon / WhatsApp</h4>
+                                <p>+62 812-3456-7890</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-icon">✉️</span>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@maisondejun.studio</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span class="info-icon">⏰</span>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Sabtu: 09:00 - 17:00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Kontak Interaktif -->
+                    <div class="kontak-form-card">
+                        <h3>Kirim Pesan</h3>
+                        <form id="contactForm">
+                            <div class="input-group">
+                                <label for="nama">Nama Lengkap</label>
+                                <input type="text" id="nama" placeholder="Masukkan nama Anda..." required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="email">Alamat Email</label>
+                                <input type="email" id="email" placeholder="contoh@email.com" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="subjek">Subjek Pesan</label>
+                                <input type="text" id="subjek" placeholder="Pertanyaan Produk / Garansi / Lainnya" required>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="pesan">Pesan Anda</label>
+                                <textarea id="pesan" rows="5" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-kirim">Kirim Pesan 🚀</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+<footer>
+
+    <!-- INFORMASI FOOTER -->
+    <div class="container footer-content">
+
+        <!-- DESIGNED BY -->
+        <div class="footer-item">
+            <p class="footer-label">DESIGNED BY</p>
+
+            <h2>Nabiilah</h2>
+
+            <p>Creative Web Designer</p>
+        </div>
+
+
+        <!-- CONTACT PERSON -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT PERSON</p>
+
+            <h2>Customer Service</h2>
+
+            <p>+62 812-3456-7890</p>
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT</p>
+
+            <div class="social-link">
+
+                <span class="social-icon">✉</span>
+
+                <span>maisondejun@gmail.com</span>
+
+            </div>
+
+            <p>We are ready to help you</p>
+        </div>
+
+
+        <!-- INSTAGRAM -->
+        <div class="footer-item">
+            <p class="footer-label">FOLLOW US</p>
+
+            <div class="social-link">
+
+                <span class="social-icon instagram-icon">
+                    <span class="instagram-camera"></span>
+                </span>
+
+                <span>@maisondejun.studio</span>
+
+            </div>
+
+            <p>Instagram & TikTok</p>
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MaisondeJun. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+    <!-- Link Ke JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

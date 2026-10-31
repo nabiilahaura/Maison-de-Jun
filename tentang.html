@@ -1,0 +1,1037 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tentang Kami | Maison de Jun</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =====================================
+   ILUSTRASI KIRI HERO TENTANG
+===================================== */
+
+.about-hero-content {
+    max-width: 1200px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 180px minmax(0, 750px);
+    align-items: center;
+    gap: 35px;
+}
+
+/* Area ilustrasi */
+.about-visual {
+    position: relative;
+    width: 180px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lingkaran dekorasi */
+.about-visual-orbit {
+    position: absolute;
+    border: 1px solid rgba(112, 168, 255, 0.35);
+    border-radius: 50%;
+}
+
+.orbit-a {
+    width: 190px;
+    height: 190px;
+    box-shadow: 0 0 35px rgba(70, 130, 255, 0.12);
+}
+
+.orbit-b {
+    width: 150px;
+    height: 150px;
+    border-style: dashed;
+    animation: aboutOrbit 18s linear infinite;
+}
+
+@keyframes aboutOrbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Laptop */
+.about-laptop {
+    position: relative;
+    z-index: 2;
+    width: 155px;
+    animation: aboutFloat 4s ease-in-out infinite;
+}
+
+.about-laptop-screen {
+    position: relative;
+    height: 112px;
+    overflow: hidden;
+    border: 6px solid #a9c9ff;
+    border-radius: 11px;
+    background: linear-gradient(145deg, #203d70, #3158a0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.about-screen-glow {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #4b9aff;
+    opacity: 0.2;
+    filter: blur(35px);
+    border-radius: 50%;
+}
+
+.about-laptop-icon {
+    position: relative;
+    color: #83dfff;
+    font-size: 27px;
+}
+
+.about-laptop-screen h3 {
+    position: relative;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin: 3px 0;
+}
+
+.about-laptop-screen p {
+    position: relative;
+    color: #b8d5ff;
+    font-size: 7px;
+    letter-spacing: 1.5px;
+}
+
+.about-laptop-base {
+    width: 175px;
+    height: 8px;
+    margin-left: -10px;
+    background: linear-gradient(90deg, #789bd1, #e1edff, #789bd1);
+    border-radius: 2px 2px 10px 10px;
+}
+
+/* Ikon melayang */
+.about-float-icon {
+    position: absolute;
+    z-index: 3;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #8ac5ff;
+    background: #1b3766;
+    border: 1px solid rgba(112, 168, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+
+.float-a {
+    top: 15px;
+    right: -3px;
+}
+
+.float-b {
+    bottom: 28px;
+    left: -8px;
+}
+
+.float-c {
+    top: 50%;
+    right: -17px;
+}
+
+@keyframes aboutFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(-10deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-6deg);
+    }
+}
+
+/* Tampilan tablet dan HP */
+@media (max-width: 850px) {
+    .about-hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-visual {
+        margin: 0 auto;
+    }
+
+    .about-hero-text {
+        text-align: center;
+    }
+}
+
+        /* CERITA KAMI */
+
+        .about-story {
+            padding: 80px 0;
+        }
+
+        .about-story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 55px;
+        }
+
+        .about-image {
+            min-height: 350px;
+            border-radius: 18px;
+            background:
+                linear-gradient(
+                    rgba(10, 20, 40, 0.15),
+                    rgba(10, 20, 40, 0.15)
+                ),
+                url("https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=85")
+                center/cover no-repeat;
+            box-shadow: 0 15px 40px rgba(15, 35, 70, 0.12);
+        }
+
+        .about-story-text h2 {
+            font-size: 32px;
+            line-height: 1.35;
+            margin-bottom: 22px;
+        }
+
+        .about-story-text h2 span {
+            color: #3478ed;
+        }
+
+        .about-story-text p {
+            color: #687386;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 16px;
+        }
+
+        /* KEUNGGULAN */
+
+        .about-benefits {
+            background: #f5f7fb;
+            padding: 80px 0;
+        }
+
+        .about-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 45px;
+        }
+
+        .about-heading > p:first-child {
+            color: #3478ed;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 12px;
+        }
+
+        .about-heading h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .about-heading > p:last-child {
+            color: #687386;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .about-benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .about-benefit-card {
+            padding: 30px 25px;
+            background: white;
+            border: 1px solid #e6ebf3;
+            border-radius: 14px;
+            transition: 0.3s;
+        }
+
+        .about-benefit-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(30, 70, 130, 0.09);
+            border-color: #b8d0ff;
+        }
+
+        .about-benefit-icon {
+            width: 55px;
+            height: 55px;
+            background: #eaf1ff;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .about-benefit-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .about-benefit-card p {
+            color: #687386;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        /* KATEGORI PRODUK */
+
+        .about-categories {
+            padding: 80px 0;
+        }
+
+        .about-category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .about-category-card {
+            padding: 30px 18px;
+            text-align: center;
+            border: 1px solid #e5eaf2;
+            border-radius: 14px;
+            transition: 0.3s;
+            background: white;
+        }
+
+        .about-category-card:hover {
+            transform: translateY(-6px);
+            border-color: #8bb3ff;
+            box-shadow: 0 12px 28px rgba(37, 99, 235, 0.08);
+        }
+
+        .about-category-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .about-category-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .about-category-card p {
+            color: #687386;
+            font-size: 12px;
+            line-height: 1.8;
+        }
+
+        /* VISI */
+
+        .about-vision {
+            background: linear-gradient(120deg, #0b1220, #17345f);
+            padding: 75px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .about-vision .container {
+            max-width: 850px;
+        }
+
+        .about-vision .about-label {
+            margin-bottom: 15px;
+        }
+
+        .about-vision h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+
+        .about-vision p:last-child {
+            color: #d0d9e8;
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        /* TOMBOL PRODUK */
+
+        .about-cta {
+            text-align: center;
+            padding: 75px 20px;
+        }
+
+        .about-cta h2 {
+            font-size: clamp(27px, 4vw, 36px);
+            margin-bottom: 15px;
+        }
+
+        .about-cta p {
+            color: #687386;
+            font-size: 14px;
+            margin-bottom: 28px;
+        }
+
+        .about-cta a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .about-cta a:hover {
+            background: #1745a5;
+            transform: translateY(-3px);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .about-story-grid {
+                gap: 30px;
+            }
+
+            .about-category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-benefit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-hero {
+                padding: 65px 0;
+            }
+
+            .about-story {
+                padding: 60px 0;
+            }
+
+            .about-story-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-image {
+                min-height: 270px;
+            }
+
+            .about-story-text h2,
+            .about-heading h2 {
+                font-size: 27px;
+            }
+
+            .about-benefits,
+            .about-categories {
+                padding: 60px 0;
+            }
+
+            .about-benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-category-grid {
+                gap: 12px;
+            }
+
+            .about-category-card {
+                padding: 25px 12px;
+            }
+        }
+
+        
+/* =====================================
+   RESTORE DESAIN AWAL HERO TENTANG
+   ===================================== */
+
+.about-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 430px;
+    padding: 75px 0;
+    color: #f8fafc;
+
+    background:
+        radial-gradient(
+            circle at 85% 35%,
+            rgba(59, 130, 246, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            120deg,
+            #0a1020,
+            #111c35 55%,
+            #142b4d
+        );
+}
+
+.about-hero-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 0.85fr 1.4fr;
+    align-items: center;
+    gap: 45px;
+}
+
+/* POSISI ANIMASI LAPTOP */
+.about-visual {
+    margin: auto;
+}
+
+/* TULISAN */
+.about-hero-text {
+    max-width: 750px;
+}
+
+.about-hero-text .about-label {
+    color: #67b7ff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.about-hero-text h2 {
+    color: #ffffff;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.about-hero-text h2 span {
+    display: block;
+    color: #70aaff;
+}
+
+.about-hero-text > p:last-child {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .about-hero {
+        padding: 55px 0;
+    }
+
+    .about-hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-hero-text {
+        text-align: center;
+    }
+
+    .about-hero-text h2 {
+        font-size: 38px;
+    }
+}
+
+
+/* MEMPERBESAR LAPTOP LEBIH SIGNIFIKAN */
+
+.about-laptop {
+    width: 260px;
+}
+
+.about-laptop-screen {
+    height: 185px;
+}
+
+.about-laptop-base {
+    width: 285px;
+    margin-left: -12.5px;
+}
+
+
+/* MERAPIKAN DEKORASI LAPTOP */
+
+.about-visual {
+    width: 340px;
+    height: 340px;
+    position: relative;
+}
+
+/* Lingkaran belakang laptop */
+.about-visual-orbit.orbit-a {
+    width: 330px;
+    height: 330px;
+    z-index: 1;
+}
+
+.about-visual-orbit.orbit-b {
+    width: 270px;
+    height: 270px;
+    z-index: 1;
+}
+
+/* Laptop tetap dengan ukuran sebelumnya */
+.about-laptop {
+    width: 260px;
+    z-index: 2;
+}
+
+/* Ikon kecil di sekeliling laptop */
+.about-float-icon {
+    z-index: 3;
+}
+
+.float-a {
+    top: 20px;
+    right: 12px;
+}
+
+.float-b {
+    bottom: 38px;
+    left: 12px;
+}
+
+.float-c {
+    top: 53%;
+    right: -5px;
+}
+
+
+
+/* Mendekatkan ikon ke laptop */
+.float-a {
+    top: 48px;
+    right: 35px;
+}
+
+.float-b {
+    bottom: 55px;
+    left: 35px;
+}
+
+.float-c {
+    top: 53%;
+    right: 15px;
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER: SAMA DENGAN HOME -->
+
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Maison de Jun" class="logo-img">
+                <h1>Maison <span>de</span> Jun</h1>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="produk.html">Produk</a>
+                <a href="tentang.html" class="active">Tentang</a>
+                <a href="kontak.html">Kontak</a>
+
+                <a href="keranjang.html" class="cart-link">
+                    🛒 <span id="cart-count">0</span>
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO TENTANG -->
+<section class="about-hero">
+
+    <div class="container about-hero-content">
+
+        <!-- ILUSTRASI SEBELAH KIRI -->
+        <div class="about-visual">
+            <div class="about-visual-orbit orbit-a"></div>
+            <div class="about-visual-orbit orbit-b"></div>
+
+            <div class="about-laptop">
+                <div class="about-laptop-screen">
+                    <div class="about-screen-glow"></div>
+                    <span class="about-laptop-icon">✦</span>
+                    <h3>MAISON</h3>
+                    <p>TECHNOLOGY STORE</p>
+                </div>
+                <div class="about-laptop-base"></div>
+            </div>
+
+            <div class="about-float-icon float-a">⌘</div>
+            <div class="about-float-icon float-b">⚡</div>
+            <div class="about-float-icon float-c">✧</div>
+        </div>
+
+        <!-- TEKS ASLI, TIDAK DIUBAH -->
+        <div class="about-hero-text">
+
+            <p class="about-label">
+                ✦ GET TO KNOW US
+            </p>
+
+            <h2>
+                Technology for Your
+                <span>Better Future.</span>
+            </h2>
+
+            <p>
+                Mengenal lebih dekat Maison de Jun, toko gadget yang
+                menghadirkan berbagai pilihan laptop, smartphone,
+                smartwatch, dan aksesoris untuk menemani aktivitas
+                digital kamu.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- CERITA KAMI -->
+
+        <section class="about-story">
+
+            <div class="container about-story-grid">
+
+                <div class="about-image"></div>
+
+                <div class="about-story-text">
+
+                    <p class="about-label">WHO WE ARE</p>
+
+                    <h2>
+                        Lebih Dekat dengan
+                        <span>Maison de Jun.</span>
+                    </h2>
+
+                    <p>
+                        Maison de Jun merupakan toko gadget yang menyediakan
+                        berbagai pilihan perangkat teknologi untuk mendukung
+                        kebutuhan sehari-hari.
+                    </p>
+
+                    <p>
+                        Kami memahami bahwa teknologi menjadi bagian penting
+                        dalam kegiatan belajar, bekerja, berkomunikasi,
+                        maupun menikmati hiburan. Karena itu, memilih
+                        perangkat yang tepat dapat membuat aktivitas
+                        menjadi lebih praktis dan nyaman.
+                    </p>
+
+                    <p>
+                        Melalui Maison de Jun, kami ingin membantu pelanggan
+                        menemukan perangkat yang sesuai dengan kebutuhan
+                        mereka, dengan pilihan produk yang beragam dan
+                        informasi yang mudah dipahami.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KEUNGGULAN -->
+
+        <section class="about-benefits">
+
+            <div class="container">
+
+                <div class="about-heading">
+
+                    <p>WHY CHOOSE US?</p>
+
+                    <h2>Kenapa Maison de Jun?</h2>
+
+                    <p>
+                        Kami ingin memberikan pengalaman berbelanja
+                        teknologi yang nyaman dan praktis.
+                    </p>
+
+                </div>
+
+                <div class="about-benefit-grid">
+
+                    <div class="about-benefit-card">
+
+                        <div class="about-benefit-icon">🚚</div>
+
+                        <h3>Pengiriman Cepat</h3>
+
+                        <p>
+                            Pesanan dipersiapkan untuk dikirim dengan
+                            memperhatikan keamanan produk selama perjalanan.
+                        </p>
+
+                    </div>
+
+                    <div class="about-benefit-card">
+
+                        <div class="about-benefit-icon">🛡️</div>
+
+                        <h3>Produk Berkualitas</h3>
+
+                        <p>
+                            Beragam pilihan perangkat teknologi dengan
+                            informasi produk untuk membantu kamu menentukan
+                            pilihan.
+                        </p>
+
+                    </div>
+
+                    <div class="about-benefit-card">
+
+                        <div class="about-benefit-icon">💬</div>
+
+                        <h3>Support Ramah</h3>
+
+                        <p>
+                            Kami ingin memberikan pelayanan yang ramah
+                            serta membantu menjawab pertanyaan pelanggan
+                            seputar produk.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- KATEGORI PRODUK -->
+
+        <section class="about-categories">
+
+            <div class="container">
+
+                <div class="about-heading">
+
+                    <p>OUR PRODUCT CATEGORIES</p>
+
+                    <h2>Temukan Gadget Favoritmu</h2>
+
+                    <p>
+                        Berbagai kategori perangkat untuk mendukung
+                        kebutuhan teknologi kamu.
+                    </p>
+
+                </div>
+
+                <div class="about-category-grid">
+
+                    <a href="produk.html" class="about-category-card">
+
+                        <div class="about-category-icon">💻</div>
+
+                        <h3>Laptop</h3>
+
+                        <p>
+                            Untuk belajar, bekerja, dan produktivitas.
+                        </p>
+
+                    </a>
+
+                    <a href="produk.html" class="about-category-card">
+
+                        <div class="about-category-icon">📱</div>
+
+                        <h3>Smartphone</h3>
+
+                        <p>
+                            Teman komunikasi dan aktivitas digital.
+                        </p>
+
+                    </a>
+
+                    <a href="produk.html" class="about-category-card">
+
+                        <div class="about-category-icon">⌚</div>
+
+                        <h3>Smartwatch</h3>
+
+                        <p>
+                            Teknologi pintar untuk aktivitas sehari-hari.
+                        </p>
+
+                    </a>
+
+                    <a href="produk.html" class="about-category-card">
+
+                        <div class="about-category-icon">🎧</div>
+
+                        <h3>Aksesoris</h3>
+
+                        <p>
+                            Pelengkap untuk perangkat teknologi kamu.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VISI -->
+
+        <section class="about-vision">
+
+            <div class="container">
+
+                <p class="about-label">OUR VISION</p>
+
+                <h2>
+                    Connecting People Through Technology.
+                </h2>
+
+                <p>
+                    Kami ingin menjadi salah satu pilihan pelanggan
+                    dalam menemukan perangkat teknologi yang sesuai
+                    dengan kebutuhan mereka. Maison de Jun hadir untuk
+                    mendukung aktivitas digital melalui pilihan gadget
+                    yang beragam dan pengalaman berbelanja yang nyaman.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- AJAKAN MELIHAT PRODUK -->
+
+        <section class="about-cta">
+
+            <div class="container">
+
+                <p class="about-label">READY TO EXPLORE?</p>
+
+                <h2>Upgrade Your Digital Life.</h2>
+
+                <p>
+                    Temukan perangkat yang cocok untuk menemani
+                    aktivitas digitalmu bersama Maison de Jun.
+                </p>
+
+                <a href="produk.html">
+                    Lihat Produk Kami &rarr;
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER: SAMA DENGAN HOME -->
+
+    <footer>
+
+        <div class="container footer-content">
+
+            <div class="footer-item">
+                <p class="footer-label">DESIGNED BY</p>
+
+                <h2>Nabiilah</h2>
+
+                <p>Creative Web Designer</p>
+            </div>
+
+            <div class="footer-item">
+                <p class="footer-label">CONTACT PERSON</p>
+
+                <h2>Customer Service</h2>
+
+                <p>+62 812-3456-7890</p>
+            </div>
+
+            <div class="footer-item">
+                <p class="footer-label">CONTACT</p>
+
+                <div class="social-link">
+                    <span class="social-icon">✉</span>
+                    <span>maisondejun@gmail.com</span>
+                </div>
+
+                <p>We are ready to help you</p>
+            </div>
+
+            <div class="footer-item">
+                <p class="footer-label">FOLLOW US</p>
+
+                <div class="social-link">
+                    <span class="social-icon instagram-icon">
+                        <span class="instagram-camera"></span>
+                    </span>
+
+                    <span>@maisondejun.studio</span>
+                </div>
+
+                <p>Instagram & TikTok</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 MaisondeJun. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

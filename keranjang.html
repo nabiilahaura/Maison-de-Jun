@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maison de Jun - Keranjang Belanja</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGASI AWAL -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo FourthTech" class="logo-img">
+        <h1>Maison <span>de</span> Jun</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="produk.html">Produk</a>
+        <a href="tentang.html">Tentang</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="keranjang.html" class="cart-link active">🛒 <span id="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HALAMAN KERANJANG AWAL -->
+  <main class="container cart-page">
+    <h2>Keranjang Belanja Anda</h2>
+    
+    <div class="cart-wrapper">
+      <!-- Daftar barang di keranjang -->
+      <div id="cart-items" class="cart-items">
+        <p class="empty-msg">Keranjang belanja Anda masih kosong.</p>
+      </div>
+
+      <!-- Ringkasan Pembayaran -->
+      <div class="cart-summary">
+        <h3>Ringkasan Belanja</h3>
+        <div class="summary-item">
+          <span>Total Harga:</span>
+          <strong id="cart-total">Rp0</strong>
+        </div>
+        <button id="checkout-btn" class="btn-checkout">Lanjut ke Pembayaran 💳</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL POP-UP PEMBAYARAN BERWARNA DENGAN MASKOT -->
+  <div id="payment-modal" class="modal-overlay">
+    <div class="modal-box">
+      
+      <!-- Banner Maskot & Header -->
+      <div class="modal-banner">
+        <span class="close-modal" onclick="closePaymentModal()">&times;</span>
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Happy Shopper Mascot" class="mascot-img">
+        <div class="banner-text">
+          <h3>Selesaikan Pembayaran 🛍️</h3>
+          <p>Pilih metode favoritmu & dapatkan promo menarik!</p>
+        </div>
+      </div>
+
+      <div class="modal-body">
+
+    <!-- TOTAL PEMBAYARAN -->
+    <div class="total-bayar-card">
+        <span>Total Pembayaran</span>
+        <strong id="modal-total-bayar">Rp0</strong>
+    </div>
+
+    <!-- TAHAP 1: PILIH METODE PEMBAYARAN -->
+    <div id="payment-selection">
+
+        <p class="select-title">
+            Pilih Metode Pembayaran <span id="selected-emoji">👇</span>
+        </p>
+
+      <div class="payment-options">
+
+    <label class="payment-option">
+        <input type="radio" name="payment_method" value="QRIS"
+            checked onchange="updateEmoji('📱')">
+
+        <div class="option-card qris-card">
+            <span class="pay-icon">📱</span>
+            <div class="option-detail">
+                <strong>QRIS</strong>
+                <p>Gopay, OVO, Dana, ShopeePay</p>
+            </div>
+            <span class="badge-fast">Cepat</span>
+        </div>
+    </label>
+
+    <label class="payment-option">
+        <input type="radio" name="payment_method" value="Transfer Bank"
+            onchange="updateEmoji('🏦')">
+
+        <div class="option-card bca-card">
+            <span class="pay-icon">🏦</span>
+            <div class="option-detail">
+                <strong>Transfer Bank</strong>
+                <p>BCA, BRI, BNI, Mandiri, dan lainnya</p>
+            </div>
+        </div>
+    </label>
+
+</div>
+
+        <button onclick="lanjutDetailPembayaran()" class="btn-konfirmasi-pay">
+            Lanjutkan Pembayaran <span id="btn-emoji">🚀</span>
+        </button>
+
+    </div>
+
+    <!-- TAHAP 2: DETAIL PEMBAYARAN -->
+    <div id="payment-detail" style="display: none;">
+
+        <div class="payment-step-heading">
+            <span class="payment-step-icon">💳</span>
+            <div>
+                <h3>Detail Pembayaran</h3>
+                <p>Lengkapi informasi pembayaran pesananmu</p>
+            </div>
+        </div>
+
+        <!-- INFORMASI METODE DAN REKENING TOKO -->
+        <div id="payment-instruction"></div>
+
+        <!-- FORM PEMBELI -->
+        <div class="payment-form">
+
+    <h4>Informasi Pembeli</h4>
+
+    <label for="customer-name">Nama Lengkap</label>
+    <input
+        type="text"
+        id="customer-name"
+        placeholder="Masukkan nama pembeli"
+        required
+    >
+
+    <div id="bank-field">
+        <label for="customer-bank">Bank yang Digunakan</label>
+        <select id="customer-bank">
+            <option value="">Pilih bank pembeli</option>
+            <option value="BCA">Bank BCA</option>
+            <option value="Mandiri">Bank Mandiri</option>
+            <option value="BRI">Bank BRI</option>
+            <option value="BNI">Bank BNI</option>
+            <option value="Bank lainnya">Bank lainnya</option>
+        </select>
+    </div>
+
+    <label for="customer-account">Nomor Rekening Pembeli (Contoh)</label>
+    <input
+        type="text"
+        id="customer-account"
+        inputmode="numeric"
+        placeholder="Contoh: 1234567890"
+        maxlength="20"
+    >
+
+  </div>
+
+  <!-- TOMBOL LAKUKAN PEMBAYARAN -->
+  <button onclick="prosesBayar()" class="btn-konfirmasi-pay">
+      Lakukan Pembayaran ✓
+  </button>
+
+  <!-- TOMBOL KEMBALI -->
+  <button onclick="kembaliPilihMetode()" class="btn-secondary payment-back">
+      ← Kembali ke Pilihan Metode
+  </button>
+
+
+    </div>
+    <!-- Penutup payment-detail -->
+
+  </div>
+  <!-- Penutup modal-body -->
+
+  </div>
+  <!-- Penutup modal-box -->
+
+</div>
+<!-- Penutup payment-modal -->
+
+<!-- CONTAINER UNTUK TOAST NOTIFIKASI -->
+<div id="toast-container"></div>
+
+
+  <!-- FOOTER -->
+<footer>
+
+    <!-- INFORMASI FOOTER -->
+    <div class="container footer-content">
+
+        <!-- DESIGNED BY -->
+        <div class="footer-item">
+            <p class="footer-label">DESIGNED BY</p>
+
+            <h2>Nabiilah</h2>
+
+            <p>Creative Web Designer</p>
+        </div>
+
+
+        <!-- CONTACT PERSON -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT PERSON</p>
+
+            <h2>Customer Service</h2>
+
+            <p>+62 812-3456-7890</p>
+        </div>
+
+
+        <!-- EMAIL -->
+        <div class="footer-item">
+            <p class="footer-label">CONTACT</p>
+
+            <div class="social-link">
+
+                <span class="social-icon">✉</span>
+
+                <span>maisondejun@gmail.com</span>
+
+            </div>
+
+            <p>We are ready to help you</p>
+        </div>
+
+
+        <!-- INSTAGRAM -->
+        <div class="footer-item">
+            <p class="footer-label">FOLLOW US</p>
+
+            <div class="social-link">
+
+                <span class="social-icon instagram-icon">
+                    <span class="instagram-camera"></span>
+                </span>
+
+                <span>@maisondejun.studio</span>
+
+            </div>
+
+            <p>Instagram & TikTok</p>
+        </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 MaisondeJun. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
